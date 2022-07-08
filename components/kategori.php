@@ -4,7 +4,7 @@
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 my-2 g-3">
         <div class="col">
           <div class="card bg-image hover-zoom">
-            <img src="./img/KING GNU - One Way @seabus_tea.jpg" alt="" />
+            <img src="./img/Jaket.jpg" alt="" />
             <a href="#!">
               <div class="mask" style="background-color: rgba(0, 0, 0, 0.4)">
                 <div
@@ -24,7 +24,7 @@
         </div>
         <div class="col">
           <div class="card bg-image hover-zoom">
-            <img src="./img/KING GNU - One Way @seabus_tea.jpg" alt="" />
+            <img src="./img/Kaos.jpg" alt="" />
             <a href="#!">
               <div class="mask" style="background-color: rgba(0, 0, 0, 0.4)">
                 <div
@@ -44,7 +44,7 @@
         </div>
         <div class="col">
           <div class="card bg-image hover-zoom">
-            <img src="./img/KING GNU - One Way @seabus_tea.jpg" alt="" />
+            <img src="./img/Kemeja.jpg" alt="" />
             <a href="#!">
               <div class="mask" style="background-color: rgba(0, 0, 0, 0.4)">
                 <div
@@ -64,7 +64,7 @@
         </div>
         <div class="col">
           <div class="card bg-image hover-zoom">
-            <img src="./img/KING GNU - One Way @seabus_tea.jpg" alt="" />
+            <img src="./img/Tas.jpg" alt="" />
             <a href="#!">
               <div class="mask" style="background-color: rgba(0, 0, 0, 0.4)">
                 <div
@@ -84,7 +84,7 @@
         </div>
         <div class="col">
           <div class="card bg-image hover-zoom">
-            <img src="./img/KING GNU - One Way @seabus_tea.jpg" alt="" />
+            <img src="./img/Topi.jpg" alt="" />
             <a href="#!">
               <div class="mask" style="background-color: rgba(0, 0, 0, 0.4)">
                 <div
@@ -104,7 +104,7 @@
         </div>
         <div class="col">
           <div class="card bg-image hover-zoom">
-            <img src="./img/KING GNU - One Way @seabus_tea.jpg" alt="" />
+            <img src="./img/Celana.jpg" alt="" />
             <a href="#!">
               <div class="mask" style="background-color: rgba(0, 0, 0, 0.4)">
                 <div
