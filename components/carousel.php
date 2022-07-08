@@ -35,7 +35,7 @@
     <span class="visually-hidden">Previous</span>
   </button>
   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path></svg></i></span>
+    <span aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
 </div>
