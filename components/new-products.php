@@ -5,15 +5,14 @@
         <div class="col">
           <div class="card">
             <img
-              src="./img/Wallpaper.jpg"
+              src="./img/kaos1.jpeg"
               class="card-img-top img-fluid"
               alt=""
             />
             <div class="card-body">
-              <h6 class="card-title">Jujutsu Model 1</h6>
+              <h6 class="card-title">Jujutsu Model Izanagi</h6>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Consequatur excepturi neque modi illum itaque voluptatum.
+                Rp 125.000
               </p>
             </div>
           </div>
@@ -21,15 +20,14 @@
         <div class="col">
           <div class="card">
             <img
-              src="./img/Wallpaper.jpg"
+              src="./img/kaos2.jpeg"
               class="card-img-top img-fluid"
               alt=""
             />
             <div class="card-body">
-              <h6 class="card-title">Jujutsu Model 1</h6>
+              <h6 class="card-title">Jujutsu Model Izanami</h6>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Consequatur excepturi neque modi illum itaque voluptatum.
+                Rp 125.000
               </p>
             </div>
           </div>
@@ -37,15 +35,14 @@
         <div class="col">
           <div class="card">
             <img
-              src="./img/Wallpaper.jpg"
+              src="./img/kaos3.jpeg"
               class="card-img-top img-fluid"
               alt=""
             />
             <div class="card-body">
-              <h6 class="card-title">Jujutsu Model 1</h6>
+              <h6 class="card-title">Jujutsu Model Tsukoyomi</h6>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Consequatur excepturi neque modi illum itaque voluptatum.
+                Rp 125.000
               </p>
             </div>
           </div>
@@ -53,15 +50,14 @@
         <div class="col">
           <div class="card">
             <img
-              src="./img/Wallpaper.jpg"
+              src="./img/kaos4.jpeg"
               class="card-img-top img-fluid"
               alt=""
             />
             <div class="card-body">
-              <h6 class="card-title">Jujutsu Model 1</h6>
+              <h6 class="card-title">Jujutsu Model Yata No Kagami</h6>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Consequatur excepturi neque modi illum itaque voluptatum.
+                Rp 125.000
               </p>
             </div>
           </div>
