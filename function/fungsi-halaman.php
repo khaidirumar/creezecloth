@@ -13,6 +13,12 @@ function content($menu) {
   if($cek == 'edit') {
     $file = 'edit.php';
   }
+  if($cek == 'login') {
+    $file = 'login.php';
+  }
+  if($cek == 'register') {
+    $file = 'register.php';
+  }
   return $file;
 }
 ?>
