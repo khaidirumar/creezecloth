@@ -70,7 +70,7 @@ $carousels = query("SELECT * FROM carousel");
                   </button>
                   <a href="index.php?menu=edit-carousel&id=<?= $carousel['carouselId'] ?>">
                     <button class="btn btn-info">
-                      <i class='bx bxs-edit'></i>
+                      <i class='bx bxs-edit' style="color: #FFFFFF;"></i>
                     </button>
                   </a>
                 </div>

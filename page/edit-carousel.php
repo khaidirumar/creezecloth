@@ -14,6 +14,24 @@
     
     if($_FILES['gambar']['name'] != null) {
       $gambar = upload();
+      $gambarLama = './img/'.$carousel[0]['image'];
+
+      if($gambar) {
+        if(!unlink($gambarLama)) {
+          echo '
+            <script>
+              alert("Tidak bisa menghapus gambar karena error");
+            </script>
+          ';
+        } 
+
+      } else {
+        echo '
+          <script>
+            alert("Error");
+          </script>
+        ';
+      }
 
     } else {
       $gambar = $carousel[0]['image'];
