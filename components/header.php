@@ -43,7 +43,7 @@ if (isset($_SESSION['login'])) {
             <a class="nav-link fw-bold" href="index.php?menu=products">Products</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-bold" href="#">About</a>
+            <a class="nav-link fw-bold" href="index.php?menu=about">About</a>
           </li>
         </ul>
         <?php if (!isset($_SESSION['username'])) : ?>

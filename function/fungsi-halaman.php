@@ -22,6 +22,9 @@ function content($menu) {
   if($cek == 'products') {
     $file = 'products.php';
   }
+  if($cek == 'about') {
+    $file = 'about.php';
+  }
   if($cek == 'dashboard') {
     $file = 'dashboard.php';
   }
