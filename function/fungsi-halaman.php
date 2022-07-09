@@ -19,6 +19,9 @@ function content($menu) {
   if($cek == 'register') {
     $file = 'register.php';
   }
+  if($cek == 'dashboard') {
+    $file = 'dashboard.php';
+  }
   return $file;
 }
 ?>
