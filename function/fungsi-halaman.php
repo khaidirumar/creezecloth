@@ -22,6 +22,12 @@ function content($menu) {
   if($cek == 'dashboard') {
     $file = 'dashboard.php';
   }
+  if($cek == 'delete-carousel') {
+    $file = 'delete-carousel.php';
+  }
+  if($cek == 'edit-carousel') {
+    $file = 'edit-carousel.php';
+  }
   return $file;
 }
 ?>
