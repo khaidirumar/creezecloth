@@ -5,17 +5,18 @@ include './function/connection.php';
 
 $id = $_GET['id'];
 
-$carousel = query("SELECT * FROM products WHERE productId = '$id'");
+$product = query("SELECT * FROM products WHERE productId = '$id'");
 
 if (isset($_POST['edit-product'])) {
 
   $nama = stripslashes($_POST['nama']);
   $harga = stripslashes($_POST['harga']);
+  $harga = "Rp " . number_format($harga, 0, ",", ".");
   $new = stripslashes($_POST['new']);
 
   if ($_FILES['gambar']['name'] != null) {
     $gambar = upload();
-    $gambarLama = './img/' . $carousel[0]['image'];
+    $gambarLama = './img/' . $product[0]['image'];
 
     if ($gambar) {
       if (!unlink($gambarLama)) {
@@ -65,24 +66,24 @@ if (isset($_POST['edit-product'])) {
       <div class="col-12 my-3 position-relative">
         <button type="button" class="btn-close d-none" id="close" aria-label="Close"></button>
         <div class=" d-flex align-items-center justify-content-center">
-          <img src="./img/<?= $carousel[0]['image'] ?>" class="img-fluid" id="productImg" style="max-height: 64vh;" alt="">
+          <img src="./img/<?= $product[0]['image'] ?>" class="img-fluid" id="productImg" style="max-height: 64vh;" alt="">
         </div>
       </div>
 
       <!-- Form Edit Data -->
       <form action="" method="POST" class="my-3 px-2" enctype="multipart/form-data">
-        <p class="fs-5">Edit Carousel Baru</p>
+        <p class="fs-5">Edit Produk</p>
         <div class="row row-cols-1 g-3">
           <div class="col-12 col-md-8">
             <input type="file" class="form-control" id="gambar" name="gambar" onchange="previewImg(event)">
           </div>
           <div class="col-12 col-md-8">
             <label for="nama" class="form-label">Nama</label>
-            <input type="text" class="form-control" id="nama" name="nama" value="<?= $carousel[0]['name'] ?>">
+            <input type="text" class="form-control" id="nama" name="nama" value="<?= $product[0]['name'] ?>">
           </div>
           <div class="col-12 col-md-8">
             <label for="harga" class="form-label">Harga</label>
-            <input type="number" class="form-control" id="harga" name="harga" value="<?= $carousel[0]['harga'] ?>">
+            <input type="number" class="form-control" id="harga" name="harga" value="<?= $product[0]['harga'] ?>">
           </div>
           <div class="col-12 col-md-8">
             <div class="form-check">
