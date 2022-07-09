@@ -28,6 +28,12 @@ function content($menu) {
   if($cek == 'edit-carousel') {
     $file = 'edit-carousel.php';
   }
+  if($cek == 'delete-product') {
+    $file = 'delete-product.php';
+  }
+  if($cek == 'edit-product') {
+    $file = 'edit-product.php';
+  }
   return $file;
 }
 ?>

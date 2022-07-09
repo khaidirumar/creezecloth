@@ -1,14 +1,24 @@
   <!-- New Products -->
   <div class="container my-5">
       <h2>NEW PRODUCTS</h2>
-      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 my-2 g-3">
+      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 my-2 g-3">
         <div class="col">
           <div class="card">
             <img
               src="./img/kaos1.jpeg"
               class="card-img-top img-fluid"
+              style="max-height: 40vh; object-fit: cover;"
               alt=""
             />
+            <a href="#!">
+              <div class="mask"">
+                <div
+                  class="d-flex justify-content-start align-items-start h-100"
+                >
+                  <p class="text-white bg-danger mb-0 mt-5 px-2 py-1">New</p>
+                </div>
+              </div>
+            </a>
             <div class="card-body">
               <h6 class="card-title">Jujutsu Model Izanagi</h6>
               <p>

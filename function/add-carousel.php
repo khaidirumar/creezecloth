@@ -9,9 +9,24 @@
     $description = stripslashes($data['description']);
     $image = upload();
 
-    $query = "INSERT INTO carousel VALUES ('', '$image', '$title', '$description')";
-    mysqli_query($conn, $query);
+    if($image == false) {
+      echo '
+        <script>
+          alert("Tidak berhasil menambahkan carousel karena error!");
+        </script>
+      ';
+    } else {
+      $query = "INSERT INTO carousel VALUES ('', '$image', '$title', '$description')";
+      mysqli_query($conn, $query);
 
+      echo '
+        <script>
+          alert("Carousel berhasil ditambahkan!");
+        </script>
+      ';
+    }
+
+   
   }
 
 ?>  

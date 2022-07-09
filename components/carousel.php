@@ -1,34 +1,38 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
 
+<?php 
+  $carousels = query("SELECT * FROM carousel");
+?>
 <!-- Carousel -->
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" style="max-height: 80vh">
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="max-height: 80vh">
   <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <?php
+      $i = 0;
+      foreach($carousels as $carousel) :
+    ?>
+      <button 
+        type="button" 
+        data-bs-target="#carouselExampleIndicators" 
+        data-bs-slide-to="<?= $i ?>" 
+        class="<?php $i++; if($i == 1) echo 'active'; ?>" 
+        aria-current="<?php if($i == 1) echo 'true';?>" 
+        aria-label="Slide <?= $i ?>"
+        ></button>
+    <?php endforeach; ?>
   </div>
-  <div class="carousel-inner" style="max-height: 80vh">
-    <div class="carousel-item active" style="max-height: 80vh">
-      <img src="./img/KING GNU - One Way @seabus_tea.jpg" class="d-block w-100" alt="..." />
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
+  <div class="carousel-inner" id="carousel-inner" style="max-height: 80vh">
+    <?php foreach($carousels as $carousel) : ?>
+      <div 
+        class="carousel-item<?php if(array_search($carousel, $carousels) == 0) echo ' active'; ?>" 
+        style="max-height: 80vh"
+      >
+        <img src="./img/<?= $carousel['image'] ?>" class="d-block w-100" alt="..." />
+        <div class="carousel-caption d-none d-md-block">
+          <h5><?= $carousel['title'] ?></h5>
+          <p><?= $carousel['description'] ?></p>
+        </div>
       </div>
-    </div>
-    <div class="carousel-item" style="max-height: 80vh">
-      <img src="./img/Sad Aesthetic Anime PC Wallpapers - Wallpaper Cave.jpg" class="d-block w-100" alt="..." />
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
-      </div>
-    </div>
-    <div class="carousel-item" style="max-height: 80vh">
-      <img src="./img/Wallpaper.jpg" class="d-block w-100" alt="..." />
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
-      </div>
-    </div>
+    <?php endforeach; ?>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
     <span aria-hidden="true"><i class='bx bx-chevron-left fs-1'></i></span>
