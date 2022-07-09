@@ -1,61 +1,57 @@
-<?php 
-  
-  include './function/upload-img.php';
-  include './function/connection.php';
+<?php
 
-  $id = $_GET['id'];
+include './function/upload-img.php';
+include './function/connection.php';
 
-  $carousel = query("SELECT * FROM carousel WHERE carouselId = '$id'");
+$id = $_GET['id'];
 
-  if(isset($_POST['edit-carousel'])) {
-    
-    $title = stripslashes($_POST['title']);
-    $description = stripslashes($_POST['description']);
-    
-    if($_FILES['gambar']['name'] != null) {
-      $gambar = upload();
-      $gambarLama = './img/'.$carousel[0]['image'];
+$carousel = query("SELECT * FROM carousel WHERE carouselId = '$id'");
 
-      if($gambar) {
-        if(!unlink($gambarLama)) {
-          echo '
+if (isset($_POST['edit-carousel'])) {
+
+  $title = stripslashes($_POST['title']);
+  $description = stripslashes($_POST['description']);
+
+  if ($_FILES['gambar']['name'] != null) {
+    $gambar = upload();
+    $gambarLama = './img/' . $carousel[0]['image'];
+
+    if ($gambar) {
+      if (!unlink($gambarLama)) {
+        echo '
             <script>
               alert("Tidak bisa menghapus gambar karena error");
             </script>
           ';
-        } 
-
-      } else {
-        echo '
+      }
+    } else {
+      echo '
           <script>
             alert("Error");
           </script>
         ';
-      }
-
-    } else {
-      $gambar = $carousel[0]['image'];
-
     }
+  } else {
+    $gambar = $carousel[0]['image'];
+  }
 
-    $query = "UPDATE carousel SET 
+  $query = "UPDATE carousel SET 
       title = '$title',
       description = '$description',
       image = '$gambar'
       WHERE carouselId = '$id'
     ";
-    $result = mysqli_query($conn, $query);
+  $result = mysqli_query($conn, $query);
 
-    if($result) {
-      echo '
+  if ($result) {
+    echo '
         <script>
           alert("Carousel berhasil di-update");
           window.location = "index.php?menu=dashboard";
         </script>
       ';
-    }
-
   }
+}
 ?>
 
 <div class="container">
@@ -82,8 +78,11 @@
             <label for="description" class="form-label">Description</label>
             <input type="text" class="form-control" id="description" name="description" value="<?= $carousel[0]['description'] ?>">
           </div>
-          <div class="justify-content-start">
+          <div class="d-flex justify-content-start align-items-center mt-4">
             <button type="submit" class="btn btn-primary" name="edit-carousel">Simpan Perubahan</button>
+            <a href="index.php?menu=dashboard" class="ms-3">
+              <button type="button" class="btn btn-secondary">Batal</button>
+            </a>
           </div>
         </div>
       </form>

@@ -73,11 +73,11 @@ if (isset($_POST['editProfil'])) {
               <input type="email" class="form-control" id="email" name="email" value="<?= $user[0]['email'] ?>" required>
             </div>
             <!-- Button Submit Form Edit -->
-            <div class="text-end">
+            <div class="text-end mt-4">
               <a href="index.php?menu=profil&u=<?= $user[0]['username'] ?>">
-                <button type="button" class="btn btn-secondary mt-4 me-3">Batal</button>
+                <button type="button" class="btn btn-secondary me-3">Batal</button>
               </a>
-              <button type="submit" class="btn btn-primary mt-4" name="editProfil">Simpan Perubahan</button>
+              <button type="submit" class="btn btn-primary" name="editProfil">Simpan Perubahan</button>
             </div>
           </form>
         </div>
