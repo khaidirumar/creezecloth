@@ -15,6 +15,36 @@ if (isset($_POST['editProfil'])) {
     $userImg = $user[0]['image']; 
   } else {
     $userImg = upload();
+
+    if ($userImg) {
+      if($gambarLama != "profile-0.jpg" || 
+        $gambarLama != "profile-1.jpg" ||
+        $gambarLama != "profile-2.jpg" ||
+        $gambarLama != "profile-3.jpg" ||
+        $gambarLama != "profile-4.jpg" ||
+        $gambarLama != "profile-5.jpg" ||
+        $gambarLama != "profile-6.jpg" ||
+        $gambarLama != "profile-7.jpg" ||
+        $gambarLama != "profile-8.jpg" ||
+        $gambarLama != "profile-9.jpg"
+      ) {
+        
+        if (!unlink($gambarLama)) {
+          echo '
+              <script>
+                alert("Tidak bisa menghapus gambar karena error");
+              </script>
+            ';
+        }
+      }
+
+    } else {
+      echo '
+          <script>
+            alert("Error");
+          </script>
+        ';
+    }
   }
 
   $query = "UPDATE users SET 
